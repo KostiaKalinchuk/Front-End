@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #000000;
+    font-family: Verdana, sans-serif;
+    font-size: 14px;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    margin-left: 12.5%;
+    float: left;
+    width: 47%;
+    height: 100%;
+}
+
+.links {
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.link {
+    color: green;
+    font-size: 13px;
+}
+
+.text {
+    color: grey;
+    font-size: 12px;
+}
+
+.decor{
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.imageBox1{
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    float: left;
+}
+
+.imageBox2{
+    margin-left: 4%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    float: left;
+}
+
+.imageBox3{
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    float: right;
+}
+
+.newsBox1{
+    text-decoration: none;
+}
+
+.info {
+    margin-right: 3%;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+    font-size: small;
+    float: right;
+    width: 34%;
+    height: 50%;
+}
+
+.city {
+    width: 218px;
+    height: 160px;
+}
+
+.information {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cityName {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.infor {
+    padding: 10px;
+}
+
+.infos {
+    text-decoration: none;
+}
