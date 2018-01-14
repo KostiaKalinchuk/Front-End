@@ -1,0 +1,243 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    width: 100%;
+    clear: both;
+}
+
+div {
+    box-sizing: border-box;
+}
+
+header {
+    background: url("img/bg.jpg") no-repeat center top / cover;
+    padding-bottom: 320px;
+}
+
+.container1 {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container2 {
+    width: 800px;
+    margin: 0 auto;
+}
+
+hr {
+    color: #cccccc;
+    margin: 0;
+}
+
+.logo {
+    margin-top: 24px;
+    margin-left: 60px;
+    float: left;
+}
+
+nav {
+    float: right;
+    margin-top: 30px;
+}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    display: block;
+}
+
+.menu li {
+    float: left;
+    display: block;
+    margin-right: 30px;
+}
+
+.menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.titles_first {
+    color: #fff;
+    font-size: 60px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 180px;
+}
+
+.titles_second {
+    color: #fff;
+    font-size: 30px;
+    font-style: italic;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about {
+    padding-top: 55px;
+}
+
+.about h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+}
+
+.goals {
+    float: left;
+    width: 293px;
+    text-align: right;
+}
+
+.avatar {
+    width: 190px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 85px;
+}
+
+.dreams {
+    float: right;
+    width: 293px;
+    margin-bottom: 55px;
+}
+
+.about_items p {
+    font-size: 16px;
+    line-height: 1.15em;
+}
+
+.about_items h3 {
+    font-size: 22px;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.title {
+    padding-top: 30px;
+    margin-bottom: 50px;
+}
+
+.title h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+}
+
+.skills {
+    float: left;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: right;
+    margin-left: 190px;
+}
+
+.level {
+    float: right;
+    font-size: 30px;
+    text-align: left;
+    margin: 0 320px 85px 0;
+}
+
+.contact {
+    float: left;
+    width: 275px;
+}
+
+.contact_items p {
+    color: #888888;
+    font-size: 15px;
+}
+
+.contact_items h5 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.form {
+    margin: 20px 0 90px 0;
+    float: right;
+    display: block;
+    width: 525px;
+}
+
+input {
+    padding: 0 0 0 10px;
+    width: 430px;
+    height: 42px;
+    font-size: 15px;
+    font-family: "Segoe UI", sans-serif;
+}
+
+textarea {
+    width: 430px;
+    height: 87px;
+    font-size: 15px;
+    padding: 10px 0 0 10px;
+    font-family: "Segoe UI", sans-serif;
+    resize: none;
+}
+
+input[type="submit"] {
+    width: 165px;
+    background: #333333;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 15px;
+    border: none;
+    margin: 10px 0 0 145px;
+    padding: 0;
+    height: 30px;
+}
+
+footer {
+    background-color: #333333;
+}
+
+.contact_info {
+    color: #ffffff;
+    padding-top: 45px;
+    margin-left: 180px;
+    font-size: 15px;
+    float: left;
+}
+
+.logo2 {
+    float: right;
+    height: 35px;
+    width: 45px;
+    margin: 50px 220px 70px 0;
+}
+
+@media all and (min-width: 450px) {
+    .container1 {
+        width: auto;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .container1 {
+        width: auto;
+    }
+}
+
+@media all and (min-width: 1000px) {
+    body {
+        width: auto;
+    }
+}
