@@ -1,0 +1,38 @@
+<!--Задача 2. Сделайте кнопку с надписью «получить скидку».
+При наведение кнопка должна «убегать» от курсора не давая пользователю нажать себя.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events task 2</title>
+</head>
+<body>
+<script>
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function moveButton() {
+        var i = 1;
+        for (i; i < 2; i++) {
+            button.style.top = getRandomInt(0, 500) + "px";
+            button.style.left = getRandomInt(0, 500) + "px";
+        }
+    }
+</script>
+<style>
+    #button {
+        position: relative;
+        background-color: grey;
+        border: none;
+        height: 30px;
+        width: 120px;
+        border-radius: 10px;
+    }
+</style>
+
+<input type="button" onmouseover="moveButton()" id="button" value="Отримати знижку">
+
+</body>
+</html>

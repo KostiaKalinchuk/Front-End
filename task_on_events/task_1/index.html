@@ -1,0 +1,49 @@
+<!--Задача 1. Создайте страницу с несколькими блоками текста.
+Реализуйте обработчики событий таким образом,
+чтобы при нажатии на кнопку r – текст становился красного цвета,
+кнопка g сделает цвет текста зеленым, а b – синим.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events tsak 1</title>
+</head>
+<body>
+<script>
+    function selectColorRed() {
+        var p = document.getElementById('paragraph');
+        if (p != null) {
+            p.setAttribute("style", "color:red");
+        }
+    }
+
+    function selectColorGreen() {
+        var p = document.getElementById('paragraph');
+        if (p != null) {
+            p.setAttribute("style", "color:green");
+        }
+    }
+
+    function selectColorBlue() {
+        var p = document.getElementById('paragraph');
+        if (p != null) {
+            p.setAttribute("style", "color:blue");
+        }
+    }
+
+</script>
+
+<p id="paragraph">Lorem ipsum dolor sit amet, ac erat dolor quisque magna consectetur leo, pede nec phasellus praesent
+    adipiscing. Nullam diam magna at mauris amet, non ut urna a commodo. Donec vivamus semper nisi
+    velit, proin id turpis, vehicula amet nullam convallis adipiscing ut sit, sit viverra. Duis interdum
+    eu eu sodales nec ut, non nibh accumsan eleifend. Purus ut vitae sapien dui duis dolores, porttitor
+    tempus nascetur id ut, integer ut dignissim harum.</p>
+
+
+<input type="button" onclick="selectColorRed()" style="..." value="red">
+<input type="button" onclick="selectColorGreen()" style="..." value="green">
+<input type="button" onclick="selectColorBlue()" style="..." value="blue">
+
+</body>
+</html>
