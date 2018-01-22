@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 3</title>
+</head>
+<body>
+<script>
+    window.onload = function () {
+        get('button').onclick = function () {
+            var num = get('string').value;
+            result = eval(num);
+            get('out').innerHTML = result;
+        }
+    };
+
+    var get = function (id) {
+        return document.getElementById(id);
+    }
+</script>
+<input type="text" id="string">
+<input type="button" id="button" value="Calculte"><br>
+Result:
+<div id="out"></div>
+</body>
+</html>

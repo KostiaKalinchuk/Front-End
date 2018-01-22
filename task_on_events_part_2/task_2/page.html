@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Task 2</title>
+    <script type="text/javascript">
+
+        function getQueryString() {
+
+            var args = {};
+            var query = location.search.substring(1);
+            var pairs = query.split("&")
+
+            for (var i = 0; i < pairs.length; i++) {
+                var pos = pairs[i].indexOf('=');
+                if (pos == -1) {
+                    continue;
+                }
+                var argname = pairs[i].substring(0, pos);
+                var value = pairs[i].substring(pos + 1)
+                args[argname] = value;
+            }
+            return args;
+        }
+
+        window.onload = function print() {
+            var args = getQueryString();
+            var e = document.createElement("p");
+            var number1 = +args.a;
+            var number2 = +args.b;
+            e.innerHTML = "cумма " + (number1 + number2);
+            document.body.appendChild(e);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

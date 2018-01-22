@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task_4</title>
+    <script>
+        window.onload = function () {
+            var wlink1;
+            get('link1').onclick = function() {
+                if (!wlink1 || wlink1.opener === null) {
+                    this.innerHTML += "(open)";
+                    wlink1 = window.open("link1.html", "link1");
+                } else {
+                    this.innerHTML = this.innerHTML.substr(0, this.innerHTML.length - 6);
+                    wlink1.close();
+                }
+            };
+            var wlink2;
+            get('link2').onclick = function() {
+                if (!wlink2 || wlink2.opener === null) {
+                    this.innerHTML += "(open)";
+                    wlink2 = window.open("link2.html", "link2");
+                } else {
+                    this.innerHTML = this.innerHTML.substr(0, this.innerHTML.length - 6);
+                    wlink2.close();
+                }
+            };
+            var wlink3;
+            get('link3').onclick = function() {
+                if (!wlink3 || wlink3.opener === null) {
+                    this.innerHTML += "(open)";
+                    wlink3 = window.open("link3.html", "link3");
+                } else {
+                    this.innerHTML = this.innerHTML.substr(0, this.innerHTML.length - 6);
+                    wlink3.close();
+                }
+            }
+        };
+
+        var get = function (id) {
+            return document.getElementById(id);
+        }
+    </script>
+</head>
+<body>
+<a id="link1" href="#">JS Урок 1</a>
+<a id="link2" href="#">JS Урок 2</a>
+<a id="link3" href="#">JS Урок 3</a>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <style type="text/css">
+        div {
+            color: #0033cc;
+            font: bold 12pt Tahoma;
+            margin: 15px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload = function () {
+            var t = new Date, s, n;
+            t.setHours(0, 0, 0, 0);
+
+            function Timer() {
+                t = new Date(t.getTime() + (new Date).getTime() - s.getTime());
+                get("timer").innerHTML = t.toLocaleTimeString();
+                s = new Date;
+                n = setTimeout(arguments.callee, 500);
+            }
+
+            get("start").onclick = function () {
+                t.setHours(0, 0, 0, 0);
+                s = new Date;
+                Timer()
+            };
+
+            get("stop").onclick = function () {
+                window.clearTimeout(n);
+            };
+
+            get("reset").onclick = function () {
+                t.setHours(0, 0, 0, 0);
+                s = new Date;
+                t = new Date(t.getTime() + (new Date).getTime() - s.getTime());
+                get("timer").innerHTML = t.toLocaleTimeString();
+            }
+        };
+
+        var get = function (id) {
+            return document.getElementById(id);
+        }
+    </script>
+</head>
+<body>
+<div id="timer">00:00:00</div>
+<input id="start" type="button" value="Start">
+<input id="stop" type="button" value="Stop">
+<input id="reset" type="button" value="Reset">
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; UTF-8">
+    <title>Task 5</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            document.getElementById("button").onclick = function () {
+                var value = document.getElementById("input").value;
+                document.getElementById('container').innerHTML = '<marquee direction="right" style="font-size: 30px; line-height: 150%;">' + value + '</marquee>';
+            };
+        }
+    </script>
+</head>
+<body>
+<form>
+    <label for="input">Введіть текст:</label><br>
+    <input type="text" id="input">
+    <input type="button" id="button" value="Запустити текст">
+</form>
+<div id="container"></div>
+</body>
+</html>
