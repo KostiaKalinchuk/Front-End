@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal tilte</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script>
+    window.onload = function () {
+        var demo = document.getElementsByClassName('demonstration')[0];
+        demo.onclick = function () {
+            var a = document.getElementsByClassName('modal')[0];
+            a.setAttribute("style", "visibility:visible");
+        };
+
+        var secondary = document.getElementsByClassName('secondary')[0];
+        secondary.onclick = function () {
+            var a = document.getElementsByClassName('modal')[0];
+            a.setAttribute("style", "visibility:hidden");
+        };
+
+        var close = document.getElementsByClassName('close')[0];
+        close.onclick = function () {
+            var a = document.getElementsByClassName('modal')[0];
+            a.setAttribute("style", "display:none");
+        };
+
+        var save = document.getElementsByClassName('primary')[0];
+        save.onclick = function () {
+            var div1 = document.createElement("div");
+            div1.setAttribute("class", "newDiv");
+            var div1_content = document.createTextNode("Save successful!");
+            div1.appendChild(div1_content);
+            var div2 = document.getElementsByClassName('modal-body')[0];
+            var parentDiv = div2.parentNode;
+            parentDiv.replaceChild(div1, div2);
+        }
+    }
+</script>
+<button type="button" class="demonstration">Click on button to demonstration</button>
+<div class="modal">
+    <div class="modal-content">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="close">
+            <span>&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        Modal body text goes here.
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="primary">Save changes</button>
+        <button type="button" class="secondary">Close</button>
+    </div>
+</div>
+</body>
+</html>
