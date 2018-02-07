@@ -36,28 +36,28 @@ body {
     font-size: 12px;
 }
 
-.decor{
+.decor {
     text-decoration: none;
     font-size: 12px;
 }
 
-.imageBox1{
+.imageBox1 {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     float: left;
 }
 
-.imageBox2{
+.imageBox2 {
     margin-left: 4%;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     float: left;
 }
 
-.imageBox3{
+.imageBox3 {
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
     float: right;
 }
 
-.newsBox1{
+.newsBox1 {
     text-decoration: none;
 }
 
