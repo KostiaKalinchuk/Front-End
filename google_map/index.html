@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Google map API</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3GH8Q7u6kALiL4EiON3Ly3uRNx79-Iy8&sensor=true"></script>
+    <script src="preloader.js"></script>
+    <script src="googlemap.js"></script>
+</head>
+<body>
+<div id="page-preloader" class="preloader">
+    <div class="loader"></div>
+</div>
+<div class="clo">
+    <div id="map" style="width: 600px; height: 400px"></div>
+    <p>
+        <input type="text" id="address" placeholder="Введіть адресу">
+        <input type="button" value="Пошук" onclick="searchAddress()">
+    </p>
+</div>
+<table border="1" class="tab">
+    <tr>
+        <td>Довгота</td>
+        <td><p id="lat"></p></td>
+    <tr>
+        <td>Широта</td>
+        <td><p id="lon"></p></td>
+</table>
+</body>
+</html>
