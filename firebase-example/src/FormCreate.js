@@ -84,7 +84,7 @@ const FormCreate = ({ onSubmit, initialValues }) => (
                         </Field>
                     </div>
                     <div>
-                        <label>Country</label>
+                        <label>Gender</label>
                         <Field name="gender" type="radio" value="male">
                             {obj => {
                                 return (
