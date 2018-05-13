@@ -1,9 +1,7 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-
 import FormCreate from "./FormCreate";
-
 import firebase from "./firebase";
 
 class EditFormPage extends Component {

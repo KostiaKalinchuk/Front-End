@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Link } from "react-router-dom";
-
 import FormCreate from "./FormCreate";
-
 import firebase from "./firebase";
 
 class App extends Component {
@@ -31,7 +29,7 @@ class App extends Component {
                 <FormCreate onSubmit={this.onSubmit} />
                 <ul>
                     {Object.entries(list).map(([key, { firstName, lastName, email, country, gender }]) => (
-                        <li key={key}>{`${firstName} ${lastName}: ${gender}, ${country}, ${email}   `}<Link to={key}>Edit</Link></li>
+                        <li key={key}>{`${firstName} ${lastName}: ${gender || "not defined"}, ${country || "not defined"}, ${email}   `}<Link to={key}>Edit</Link></li>
                     ))}
                 </ul>
             </div>
