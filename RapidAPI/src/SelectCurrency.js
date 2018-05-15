@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import axios from 'axios';
-// import Chart from './Graph'
+import StaticGraph from './StaticGraph';
+import DynamicGraph from './DynamicGraph';
 import Styles from './Styles';
 
 
@@ -157,8 +158,9 @@ class SelectCurrency extends Component {
                             <span ref={(span) => this.span = span}></span>
                         </div>
                     </div>
-                    {/*<StaticGraph />*/}
-                    {/*<DynamicGraph />*/}
+                    <StaticGraph/>
+                    <h2>Curren Bitcoin Dynamic</h2>
+                    <DynamicGraph/>
                 </div>
             </Styles>
         );
