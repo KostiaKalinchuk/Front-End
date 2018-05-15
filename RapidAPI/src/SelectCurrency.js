@@ -23,14 +23,14 @@ class SelectCurrency extends Component {
                         etheriumPrice: this.getApi(coin, 'USD', 1027),
                         ripplePrice: this.getApi(coin, 'USD', 52),
                         cardanoPrice: this.getApi(coin, 'USD', 2010),
-                        litecoinePrice: this.getApi(coin, 'USD', 2)
+                        litecoinPrice: this.getApi(coin, 'USD', 2)
                     },
                     EURO: {
                         bitcoinPrice: this.getApi(coin, 'EUR', 1),
                         etheriumPrice: this.getApi(coin, 'EUR', 1027),
                         ripplePrice: this.getApi(coin, 'EUR', 52),
                         cardanoPrice: this.getApi(coin, 'EUR', 2010),
-                        litecoinePrice: this.getApi(coin, 'EUR', 2)
+                        litecoinPrice: this.getApi(coin, 'EUR', 2)
                     }
                 })
             });
@@ -43,7 +43,7 @@ class SelectCurrency extends Component {
                         etheriumPrice: this.getApi(rub, 'RUB', 1027),
                         ripplePrice: this.getApi(rub, 'RUB', 52),
                         cardanoPrice: this.getApi(rub, 'RUB', 2010),
-                        litecoinePrice: this.getApi(rub, 'RUB', 2),
+                        litecoinPrice: this.getApi(rub, 'RUB', 2),
                     }
                 })
             })
@@ -119,7 +119,7 @@ class SelectCurrency extends Component {
                             <th>Etherium</th>
                             <th>Ripple</th>
                             <th>Cardano</th>
-                            <th>LiteCoine</th>
+                            <th>LiteCoin</th>
                         </tr>
                         <tr>
                             <td>
@@ -135,7 +135,7 @@ class SelectCurrency extends Component {
                                 <span>{this.criptCurrencyCalculator(this.state.value, 'cardanoPrice') || '-'}</span>
                             </td>
                             <td>
-                                <span>{this.criptCurrencyCalculator(this.state.value, 'liteCoinePrice') || '-'}</span>
+                                <span>{this.criptCurrencyCalculator(this.state.value, 'litecoinPrice') || '-'}</span>
                             </td>
                         </tr>
                     </table>
@@ -150,7 +150,7 @@ class SelectCurrency extends Component {
                                 <option value="etheriumPrice">Etherium</option>
                                 <option value="ripplePrice">Ripple</option>
                                 <option value="cardanoPrice">Cardano</option>
-                                <option value="liteCoinePrice">LiteCoine</option>
+                                <option value="litecoinPrice">LiteCoin</option>
                             </select>
                             </div>
                             <button onClick={this.convertClick}>convert</button>
