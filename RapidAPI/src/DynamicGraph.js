@@ -58,8 +58,8 @@ class DynamicGraph extends Component {
                 />
                 {this.state.data && (
                     <Line
-                        width={100}
-                        height={20}
+                        width={70}
+                        height={30}
                         data={this.state.data}
                         options={{
                             position: "left",

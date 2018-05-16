@@ -14,7 +14,8 @@ class SelectCurrency extends Component {
     }
 
     componentDidMount() {
-        axios.get(`https://api.coinmarketcap.com/v2/ticker/?convert=EUR`)
+        const API = `https://api.coinmarketcap.com`;
+        axios.get(`${API}/v2/ticker/?convert=EUR`)
             .then(res => {
                 const coin = res;
                 this.setState({
@@ -34,7 +35,7 @@ class SelectCurrency extends Component {
                     }
                 })
             });
-        axios.get(`https://api.coinmarketcap.com/v2/ticker/?convert=RUB`)
+        axios.get(`${API}/v2/ticker/?convert=RUB`)
             .then(res => {
                 const rub = res
                 this.setState({
@@ -47,7 +48,7 @@ class SelectCurrency extends Component {
                     }
                 })
             })
-    }
+    };
 
     onChangeHandler = (e) => {
         this.setState({value: e.target.value});
@@ -143,15 +144,15 @@ class SelectCurrency extends Component {
                         <div className="container">
                             <h1>Cryptocurrency Converter Calculator</h1>
                             <div className="flex-container">
-                            <input className='valueInput' type="number" ref={(input) => this.valueInput = input}/>
-                            <select ref={(select) => this.convertSelect = select}>
-                                <option value="title">Choose cripto</option>
-                                <option value="bitcoinPrice">Bitcoin</option>
-                                <option value="etheriumPrice">Etherium</option>
-                                <option value="ripplePrice">Ripple</option>
-                                <option value="cardanoPrice">Cardano</option>
-                                <option value="litecoinPrice">LiteCoin</option>
-                            </select>
+                                <input className='valueInput' type="number" ref={(input) => this.valueInput = input}/>
+                                <select ref={(select) => this.convertSelect = select}>
+                                    <option value="title">Choose cripto</option>
+                                    <option value="bitcoinPrice">Bitcoin</option>
+                                    <option value="etheriumPrice">Etherium</option>
+                                    <option value="ripplePrice">Ripple</option>
+                                    <option value="cardanoPrice">Cardano</option>
+                                    <option value="litecoinPrice">LiteCoin</option>
+                                </select>
                             </div>
                             <button onClick={this.convertClick}>convert</button>
                             <br/>

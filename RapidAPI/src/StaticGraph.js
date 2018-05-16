@@ -40,8 +40,8 @@ class StaticGraph extends Component {
                     <option value="year">Year</option>
                 </select>
                 <Line
-                    width={100}
-                    height={20}
+                    width={70}
+                    height={30}
                     data={{
                         labels: this.state.year.labels,
                         datasets: [
