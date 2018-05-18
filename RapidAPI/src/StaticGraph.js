@@ -34,10 +34,9 @@ class StaticGraph extends Component {
         return (
             <div>
                 <select className='StaticGraph' onChange={this.onChangeHandler}>
-                    <option value="title">Choose period</option>
+                    <option value="year">Year</option>
                     <option value="day">Day</option>
                     <option value="month">Month</option>
-                    <option value="year">Year</option>
                 </select>
                 <Line
                     width={70}
@@ -69,7 +68,7 @@ class StaticGraph extends Component {
                         ]
                     }}
                     options={{
-                        position: "left",
+                        position: "center",
                         maintainAspectRatio: true
                     }}
                 />

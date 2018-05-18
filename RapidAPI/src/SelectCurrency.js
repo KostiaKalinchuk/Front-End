@@ -68,13 +68,13 @@ class SelectCurrency extends Component {
 
     getApi = (json, currency, currencyId) => {
         if (currency === 'USD') {
-            return json.data.data[`${currencyId}`].quotes.USD.price
+            return Math.round(json.data.data[`${currencyId}`].quotes.USD.price * 100) / 100
         }
         if (currency === 'EUR') {
-            return json.data.data[`${currencyId}`].quotes.EUR.price
+            return Math.round(json.data.data[`${currencyId}`].quotes.EUR.price * 100) / 100
         }
         if (currency === 'RUB') {
-            return json.data.data[`${currencyId}`].quotes.RUB.price
+            return Math.round(json.data.data[`${currencyId}`].quotes.RUB.price * 100) / 100
         }
     };
 
@@ -84,7 +84,7 @@ class SelectCurrency extends Component {
             return
         }
         if (this.valueInput.value.match(/^[-\+]?\d+/) === null) {
-            alert('input value');
+            alert('to pick up a kill of the currency');
             return
         }
         if (this.valueInput.value.match(/^[-\+]?\d+/) < 0) {
@@ -92,7 +92,7 @@ class SelectCurrency extends Component {
             return
         }
         if (this.convertSelect.value === 'title') {
-            alert('choose cript');
+            alert('choose cripto');
             return
         }
         let num = parseInt(this.valueInput.value.replace(/\D+/g, ""));
@@ -100,8 +100,11 @@ class SelectCurrency extends Component {
         calculator.toFixed(1);
         let currency = this.convertSelect.value.split(/[A-Z]/);
 
-        let result = `${num} ${currency[0]} = ${calculator.toFixed(2)} ${this.state.value}`;
-        this.span.innerText = result;
+        let resultCoin = `${num} ${currency[0]}`;
+        let resultCurrency = `${calculator.toFixed(2)} ${this.state.value}`;
+
+        this.span.innerText = resultCoin;
+        this.div.innerText = resultCurrency;
     };
 
     render() {
@@ -156,7 +159,11 @@ class SelectCurrency extends Component {
                             </div>
                             <button onClick={this.convertClick}>convert</button>
                             <br/>
-                            <span ref={(span) => this.span = span}></span>
+                            <div className="flex-container">
+                                <span ref={(span) => this.span = span}>0</span>
+                                <span>=</span>
+                                <div ref={(div) => this.div = div}>0</div>
+                            </div>
                         </div>
                     </div>
                     <StaticGraph/>
