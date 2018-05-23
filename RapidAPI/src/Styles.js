@@ -1,4 +1,4 @@
-import styled, {css} from "styled-components";
+import styled from "styled-components";
 
 export default styled.div`
   font-family: sans-serif;
@@ -22,7 +22,7 @@ export default styled.div`
   .container {
     text-align: center;
     background-color: #EEF1F2;
-    width: 700px;
+    width: 900px;
     height: 230px;
     margin: 0 auto;
     padding: 20px;
