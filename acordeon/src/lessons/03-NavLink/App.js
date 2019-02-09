@@ -8,9 +8,9 @@ import {
  } from 'react-router-dom';
 
 const isActiveFunc = (match, location) => {
-  console.log(match, location)
+  console.log(match, location);
   return match
-}
+};
 
 const Links = () => (
   <nav>
@@ -23,7 +23,7 @@ const Links = () => (
       Contact
     </NavLink>
   </nav>
-)
+);
 
 const App = (props) => (
   <Router basename={props.path}>
